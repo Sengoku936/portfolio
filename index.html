@@ -1,0 +1,401 @@
+portfolio_html = """<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Alain TEKIN | Infrastructure & Networks Portfolio</title>
+    
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+        
+        html, body {
+            background-color: #040407;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            color: #f3f4f6;
+        }
+        
+        .font-mono {
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        /* Cartes Premium Cybersécurité */
+        .cyber-card {
+            background: linear-gradient(160deg, rgba(15, 11, 36, 0.8) 0%, rgba(5, 5, 10, 0.98) 100%);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(139, 92, 246, 0.25);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
+            transition: all 0.3s ease;
+        }
+
+        .cyber-card:hover {
+            border-color: rgba(6, 182, 212, 0.5);
+            box-shadow: 0 0 30px rgba(139, 92, 246, 0.15);
+        }
+
+        .neon-gradient-text {
+            background: linear-gradient(135deg, #a78bfa 0%, #8b5cf6 50%, #06b6d4 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        #bg-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .content-layer {
+            position: relative;
+            z-index: 10;
+        }
+        
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #040407;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(139, 92, 246, 0.4);
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <canvas id="bg-canvas"></canvas>
+
+    <main class="content-layer min-h-screen flex flex-col items-center px-6 w-full">
+        
+        <section class="min-h-screen flex flex-col items-center justify-center text-center w-full max-w-4xl relative py-12">
+            
+            <div class="w-16 h-16 bg-purple-950/20 border border-purple-500/30 rounded-2xl flex items-center justify-center mb-8 shadow-[0_0_30px_rgba(139,92,246,0.15)]">
+                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#a78bfa" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <rect width="20" height="14" x="2" y="3" rx="2"></rect>
+                    <path d="M12 17v4"></path>
+                    <path d="M8 21h8"></path>
+                </svg>
+            </div>
+
+            <h1 class="text-5xl md:text-7xl font-bold mb-4 tracking-tighter uppercase">
+                ALAIN <span class="neon-gradient-text">TEKIN</span>
+            </h1>
+
+            <div class="flex items-center justify-center gap-3 mb-8">
+                <div class="h-px w-8 bg-purple-500/30"></div>
+                <p class="text-xs md:text-sm text-gray-400 tracking-[0.3em] uppercase font-mono">
+                    Candidat <span class="text-purple-400 font-semibold">BTS SIO SISR</span>
+                </p>
+                <div class="h-px w-8 bg-purple-500/30"></div>
+            </div>
+
+            <div class="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-xl bg-neutral-900/60 border border-purple-500/20 backdrop-blur-md mb-12">
+                <span class="flex h-2 w-2 relative">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-purple-400 opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-2 w-2 bg-purple-500"></span>
+                </span>
+                <span class="text-xs text-gray-300 font-mono">
+                    Recherche d'apprentissage <span class="text-cyan-400">// Technicien Informatique</span>
+                </span>
+            </div>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto mb-10">
+                <a href="CV_Alain_TEKIN.pdf" download="CV_Alain_TEKIN.pdf" class="flex items-center justify-center gap-2 w-full sm:w-auto px-7 py-3.5 rounded-xl bg-purple-600 hover:bg-purple-700 text-white font-medium font-mono text-xs tracking-wider transition-all shadow-[0_0_25px_rgba(139,92,246,0.3)]">
+                    TÉLÉCHARGER LE CV (PDF)
+                </a>
+                <a href="https://www.linkedin.com/in/alaintekin" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 w-full sm:w-auto px-6 py-3.5 rounded-xl bg-neutral-950/80 hover:bg-neutral-900 border border-neutral-800 text-xs font-mono text-gray-400 hover:text-white">
+                    LINKEDIN
+                </a>
+            </div>
+
+            <div class="w-full max-w-xl text-left cyber-card p-4 rounded-xl border border-neutral-800 font-mono text-xs text-gray-400 shadow-2xl">
+                <p class="text-purple-400">$ ./check_status.sh</p>
+                <p class="text-gray-500">[OK] Cursus ciblé : BTS SIO SISR (CFA INSTA, Paris)</p>
+                <p class="text-cyan-400">[INFO] Disponibilité : 24 mois à partir de Septembre 2026</p>
+                <p class="text-green-400">[READY] Organisation : 3 jours en Entreprise / 2 jours à l'École</p>
+            </div>
+        </section>
+
+        <div class="max-w-4xl w-full flex flex-col gap-28 pb-28">
+            
+            <section class="grid md:grid-cols-3 gap-6 w-full">
+                <div class="cyber-card p-8 rounded-2xl md:col-span-2">
+                    <h2 class="text-sm font-mono text-purple-400 mb-4 tracking-widest">// A_PROPOS_DE_MOI</h2>
+                    <div class="text-gray-300 space-y-4 font-light text-sm md:text-base leading-relaxed">
+                        <p>
+                            Futur étudiant en BTS SIO option SISR, je recherche une alternance de 24 mois dans le domaine de l'informatique et des réseaux (Rythme: 3j entreprise / 2j école).
+                        </p>
+                        <p>
+                            Passionné, polyvalent et rigoureux, je suis prêt à m'investir pleinement au sein de votre équipe technique.
+                        </p>
+                    </div>
+                </div>
+                <div class="cyber-card p-6 rounded-2xl flex flex-col justify-center text-center border-t-2 border-t-purple-500">
+                    <span class="text-[11px] text-gray-500 font-mono uppercase tracking-widest block mb-1">Localisation</span>
+                    <div class="text-lg font-bold text-white font-mono mb-2">AULNAY-SOUS-BOIS</div>
+                    <p class="text-xs text-gray-400 font-light">Zone Île-de-France (93600)</p>
+                </div>
+            </section>
+
+            <section class="w-full">
+                <h2 class="text-sm font-mono text-purple-400 mb-6 tracking-widest">// COMPÉTENCES_TECHNIQUES</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                    <div class="cyber-card p-5 rounded-xl">
+                        <div class="text-purple-400 font-mono text-xs mb-1">01 / DÉVELOPPEMENT</div>
+                        <p class="text-xs font-bold text-white mb-1">HTML5, CSS3, Python</p>
+                        <p class="text-[11px] text-gray-400">Notions de programmation fondamentales.</p>
+                    </div>
+                    <div class="cyber-card p-5 rounded-xl">
+                        <div class="text-purple-400 font-mono text-xs mb-1">02 / VIRTUALISATION</div>
+                        <p class="text-xs font-bold text-white mb-1">VirtualBox</p>
+                        <p class="text-[11px] text-gray-400">Notions d'administration de machines virtuelles.</p>
+                    </div>
+                    <div class="cyber-card p-5 rounded-xl">
+                        <div class="text-purple-400 font-mono text-xs mb-1">03 / PRODUCTIVITÉ</div>
+                        <p class="text-xs font-bold text-white mb-1">Suite Office</p>
+                        <p class="text-[11px] text-gray-400">Word, Excel, Powerpoint. Saisie et gestion de données.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="w-full">
+                <h2 class="text-sm font-mono text-purple-400 mb-8 tracking-widest">// EXPÉRIENCES_PROFESSIONNELLES</h2>
+                <div class="space-y-6">
+                    
+                    <div class="cyber-card p-6 rounded-xl flex flex-col md:flex-row justify-between gap-4">
+                        <div>
+                            <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-purple-950/50 text-purple-400 border border-purple-800/30">07/2024 — 08/2026</span>
+                            <h3 class="text-white font-bold text-base mt-2">Employé qualifié de restauration</h3>
+                            <h4 class="text-cyan-400 text-xs font-mono">EXTIME FOOD & BEVERAGE | Paris</h4>
+                            <ul class="text-xs text-gray-400 mt-3 list-disc list-inside space-y-1 font-light">
+                                <li>Préparation des produits, mise en place et maintien de la qualité en service continu.</li>
+                                <li>Application stricte des normes d'hygiène et de sécurité alimentaire (HACCP).</li>
+                                <li>Participation au bon déroulement du service et à la fluidité des opérations en équipe.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="cyber-card p-6 rounded-xl flex flex-col md:flex-row justify-between gap-4">
+                        <div>
+                            <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-purple-950/50 text-purple-400 border border-purple-800/30">06/2023 — 03/2024</span>
+                            <h3 class="text-white font-bold text-base mt-2">Superviseur de cuisine</h3>
+                            <h4 class="text-cyan-400 text-xs font-mono">PIZZA VEGAS | Le Blanc-Mesnil</h4>
+                            <ul class="text-xs text-gray-400 mt-3 list-disc list-inside space-y-1 font-light">
+                                <li>Organisation des tâches, répartition du travail et gestion des priorités en temps réel.</li>
+                                <li>Contrôle de la qualité des préparations et respect des standards produits.</li>
+                                <li>Gestion des stocks courants, anticipation des besoins et gestion des pics d'activité.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="cyber-card p-6 rounded-xl flex flex-col md:flex-row justify-between gap-4">
+                        <div>
+                            <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-neutral-900 text-gray-400 border border-neutral-800">10/2018 — 12/2018</span>
+                            <h3 class="text-white font-bold text-base mt-2">Archiviste stagiaire</h3>
+                            <h4 class="text-cyan-400 text-xs font-mono">Mairie de Drancy | Drancy</h4>
+                            <ul class="text-xs text-gray-400 mt-3 list-disc list-inside space-y-1 font-light">
+                                <li>Tri, classement et archivage de documents administratifs selon les procédures.</li>
+                                <li>Numérisation et mise à jour de bases documentaires.</li>
+                                <li>Recherche de dossiers pour les services internes et respect de la confidentialité.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="cyber-card p-6 rounded-xl flex flex-col md:flex-row justify-between gap-4">
+                        <div>
+                            <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-neutral-900 text-gray-400 border border-neutral-800">01/2018 — 02/2018</span>
+                            <h3 class="text-white font-bold text-base mt-2">Assistant comptable stagiaire</h3>
+                            <h4 class="text-cyan-400 text-xs font-mono">EURL Avignon Conseil | Bobigny</h4>
+                            <ul class="text-xs text-gray-400 mt-3 list-disc list-inside space-y-1 font-light">
+                                <li>Saisie et contrôle de pièces comptables (factures, notes de frais).</li>
+                                <li>Classement et archivage des documents financiers.</li>
+                                <li>Participation aux rapprochements bancaires simples et appui aux tâches administratives.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <section class="w-full">
+                <h2 class="text-sm font-mono text-purple-400 mb-6 tracking-widest">// CURSUS_ACADÉMIQUE</h2>
+                <div class="grid md:grid-cols-3 gap-4">
+                    <div class="cyber-card p-5 rounded-xl border-l-2 border-l-purple-500">
+                        <span class="text-[10px] font-mono text-purple-400 block mb-1">À partir de Septembre 2026</span>
+                        <h4 class="text-white font-bold text-sm">BTS SIO (Option SISR)</h4>
+                        <p class="text-xs text-gray-400 font-light mt-1">CFA INSTA, Paris</p>
+                    </div>
+                    <div class="cyber-card p-5 rounded-xl">
+                        <span class="text-[10px] font-mono text-gray-500 block mb-1">2020 — 2022</span>
+                        <h4 class="text-white font-bold text-sm">Licence LLCER</h4>
+                        <p class="text-xs text-gray-400 font-light mt-1">Université de Picardie Jules Verne, Amiens</p>
+                    </div>
+                    <div class="cyber-card p-5 rounded-xl">
+                        <span class="text-[10px] font-mono text-gray-500 block mb-1">2016 — 2019</span>
+                        <h4 class="text-white font-bold text-sm">Baccalauréat Professionnel</h4>
+                        <p class="text-xs text-gray-400 font-light mt-1">Gestion-Administration<br><span class="text-[11px] text-gray-500">Lycée Eugène Delacroix, Drancy</span></p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="grid md:grid-cols-2 gap-6 w-full">
+                <div class="cyber-card p-6 rounded-xl">
+                    <h3 class="text-xs font-mono text-purple-400 mb-4 tracking-wider">// LANGUES</h3>
+                    <div class="grid grid-cols-2 gap-2 text-xs font-mono text-gray-300">
+                        <div>Français : <span class="text-white font-bold">C2</span></div>
+                        <div>Turc : <span class="text-white font-bold">C2</span></div>
+                        <div>Anglais : <span class="text-white font-bold">B2</span></div>
+                        <div>Espagnol : <span class="text-white font-bold">B1</span></div>
+                        <div>Russe : <span class="text-white font-bold">B1</span></div>
+                    </div>
+                </div>
+                <div class="cyber-card p-6 rounded-xl">
+                    <h3 class="text-xs font-mono text-purple-400 mb-4 tracking-wider">// QUALITÉS_INDIVIDUELLES</h3>
+                    <div class="flex flex-wrap gap-2 text-[11px] font-mono text-gray-300">
+                        <span class="px-2 py-1 bg-neutral-900 border border-neutral-800 rounded">Travail d'équipe</span>
+                        <span class="px-2 py-1 bg-neutral-900 border border-neutral-800 rounded">Curieux</span>
+                        <span class="px-2 py-1 bg-neutral-900 border border-neutral-800 rounded">Gestion du stress</span>
+                        <span class="px-2 py-1 bg-neutral-900 border border-neutral-800 rounded">Sens de l'organisation</span>
+                        <span class="px-2 py-1 bg-neutral-900 border border-neutral-800 rounded">Autonome</span>
+                        <span class="px-2 py-1 bg-neutral-900 border border-neutral-800 rounded">Esprit d'analyse</span>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+        <footer class="w-full max-w-4xl border-t border-neutral-900 py-8 text-center text-xs text-gray-600 font-mono">
+            &copy; 2026 Alain TEKIN. Infrastructure Network System Core.
+        </footer>
+    </main>
+
+    <script>
+        const canvas = document.getElementById('bg-canvas');
+        const ctx = canvas.getContext('2d');
+
+        let width = canvas.width = window.innerWidth;
+        let height = canvas.height = window.innerHeight;
+        
+        let currentScrollY = 0;
+        let mouse = { x: null, y: null };
+
+        window.addEventListener('resize', () => {
+            width = canvas.width = window.innerWidth;
+            height = canvas.height = window.innerHeight;
+        });
+
+        window.addEventListener('scroll', () => {
+            currentScrollY = window.pageYOffset || document.documentElement.scrollTop;
+        }, { passive: true });
+
+        window.addEventListener('mousemove', (e) => {
+            mouse.x = e.clientX;
+            mouse.y = e.clientY;
+        });
+
+        window.addEventListener('mouseleave', () => {
+            mouse.x = null;
+            mouse.y = null;
+        });
+
+        const particles = [];
+        const numParticles = 65;
+        const maxDistance = 145;
+
+        class Particle {
+            constructor() {
+                this.baseX = Math.random() * width;
+                this.baseY = Math.random() * height;
+                this.vx = (Math.random() - 0.5) * 0.35;
+                this.vy = (Math.random() - 0.5) * 0.35;
+                this.radius = Math.random() * 2 + 1.5;
+            }
+            update() {
+                this.baseX += this.vx;
+                this.baseY += this.vy;
+
+                if (this.baseX < 0 || this.baseX > width) this.vx *= -1;
+                if (this.baseY < 0 || this.baseY > height) this.vy *= -1;
+            }
+            getPosition() {
+                // Effet de parallaxe : déplacement vertical fluide en fonction du défilement global
+                let scrolledY = this.baseY - (currentScrollY * 0.35);
+                scrolledY = ((scrolledY % height) + height) % height;
+                return { x: this.baseX, y: scrolledY };
+            }
+        }
+
+        for (let i = 0; i < numParticles; i++) {
+            particles.push(new Particle());
+        }
+
+        function draw() {
+            ctx.clearRect(0, 0, width, height);
+            
+            const coords = [];
+            for (let i = 0; i < particles.length; i++) {
+                particles[i].update();
+                coords.push(particles[i].getPosition());
+            }
+
+            for (let i = 0; i < particles.length; i++) {
+                ctx.beginPath();
+                ctx.arc(coords[i].x, coords[i].y, particles[i].radius, 0, Math.PI * 2);
+                ctx.fillStyle = 'rgba(167, 139, 250, 0.65)';
+                ctx.fill();
+
+                for (let j = i + 1; j < particles.length; j++) {
+                    const dx = coords[i].x - coords[j].x;
+                    const dy = coords[i].y - coords[j].y;
+                    const dist = Math.sqrt(dx * dx + dy * dy);
+
+                    if (dist < maxDistance) {
+                        ctx.beginPath();
+                        ctx.moveTo(coords[i].x, coords[i].y);
+                        ctx.lineTo(coords[j].x, coords[j].y);
+                        ctx.strokeStyle = `rgba(139, 92, 246, ${0.38 * (1 - dist / maxDistance)})`;
+                        ctx.lineWidth = 0.95;
+                        ctx.stroke();
+                    }
+                }
+
+                if (mouse.x !== null && mouse.y !== null) {
+                    const mdx = coords[i].x - mouse.x;
+                    const mdy = coords[i].y - mouse.y;
+                    const mdist = Math.sqrt(mdx * mdx + mdy * mdy);
+
+                    if (mdist < 170) {
+                        ctx.beginPath();
+                        ctx.moveTo(coords[i].x, coords[i].y);
+                        ctx.lineTo(mouse.x, mouse.y);
+                        ctx.strokeStyle = `rgba(6, 182, 212, ${0.42 * (1 - mdist / 170)})`;
+                        ctx.lineWidth = 1;
+                        ctx.stroke();
+                    }
+                }
+            }
+            requestAnimationFrame(draw);
+        }
+
+        draw();
+    </script>
+</body>
+</html>
+"""
+
+with open("portfolio_alain_tekin.html", "w", encoding="utf-8") as f:
+    f.write(portfolio_html)
+print("Fichier portfolio final généré avec succès : portfolio_alain_tekin.html")
